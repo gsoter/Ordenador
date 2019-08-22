@@ -19,4 +19,10 @@ public class Ordenador {
 		if (dValor > vMaior)
 			vMaior = dValor;
 	}
+
+	public Double getMaiorValor() {
+		return vMaior;
+	}
+	
+	
 }

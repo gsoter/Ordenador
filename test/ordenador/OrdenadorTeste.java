@@ -46,4 +46,25 @@ public class OrdenadorTeste {
 		o = null;
 		System.gc();
 	}
+
+	@Test
+	public void testeInformarValorNumerico() {
+		String pValor = "3";
+		o.vMaior = 2.0;
+		o.informarValor(pValor);
+
+		assertTrue(o.vMaior == 3.0);
+	}
+
+	@Test
+	public void testeMaiorValor() {
+		o.vMaior = 10.0;
+		assertTrue(o.getMaiorValor() == 10.0);
+	}
+
+	@After
+	public void finalizar() {
+		o = null;
+		System.gc();
+	}
 }
