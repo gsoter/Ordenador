@@ -30,6 +30,21 @@ public class OrdenadorTeste {
 
 		o.inserirColecao(pColecao);
 		assertTrue(o.vMaior == 9);
+	}	
+
+	@Test
+	public void testeInformarValorNumerico() {
+		String pValor = "3";
+		o.vMaior = 2.0;
+		o.informarValor(pValor);
+
+		assertTrue(o.vMaior == 3.0);
+	}
+
+	@After
+	public void finalizar() {
+		o = null;
+		System.gc();
 	}
 
 	@Test

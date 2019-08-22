@@ -23,4 +23,6 @@ public class Ordenador {
 	public Double getMaiorValor() {
 		return vMaior;
 	}
+	
+	
 }
