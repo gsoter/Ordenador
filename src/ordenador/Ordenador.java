@@ -20,9 +20,4 @@ public class Ordenador {
 			vMaior = dValor;
 	}
 
-	public Double getMaiorValor() {
-		return vMaior;
-	}
-	
-	
 }

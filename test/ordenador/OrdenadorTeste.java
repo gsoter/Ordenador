@@ -41,12 +41,6 @@ public class OrdenadorTeste {
 		assertTrue(o.vMaior == 3.0);
 	}
 
-	@Test
-	public void testeMaiorValor() {
-		o.vMaior = 10.0;
-		assertTrue(o.getMaiorValor() == 10.0);
-	}
-
 	@After
 	public void finalizar() {
 		o = null;
