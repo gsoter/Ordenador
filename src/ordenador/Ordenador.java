@@ -19,5 +19,9 @@ public class Ordenador {
 		if (dValor > vMaior)
 			vMaior = dValor;
 	}
+	
+	public Double getValorMaior() {
+		return this.vMaior;
+	}
 
 }
