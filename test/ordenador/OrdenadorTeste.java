@@ -29,25 +29,18 @@ public class OrdenadorTeste {
 		pColecao.add("1");
 
 		o.inserirColecao(pColecao);
-		assertTrue(o.vMaior == 9);
+		assertNotNull(o.getColecao());
 	}
 
 	@Test
 	public void testeInformarValorNumerico() {
 		String pValor = "3";
-		o.vMaior = 2.0;
+		o.setValorMaior(2.0);
 		o.informarValor(pValor);
 
-		assertTrue(o.vMaior == 3.0);
+		assertTrue(o.getValorMaior() == 3.0);
 	}
 
-	@Test
-	public void testeValorMaior() {
-		o.vMaior = 10.0;
-		assertTrue(o.getValorMaior() == 10);
-
-	}
-	
 	@Test
 	public void testeValorMaiorColecao() {
 		Collection<String> pColecao = new ArrayList<String>();
@@ -62,9 +55,18 @@ public class OrdenadorTeste {
 		pColecao.add("19");
 		pColecao.add("15");
 		o.inserirColecao(pColecao);
-		
-		assertTrue(o.getValorMaior() == 19);
 
+		assertTrue(o.getValorMaior() == 19);
+	}
+
+	@Test
+	public void testeValorMenor() {
+		String valor = "20.0";
+
+		o.setValorMenor(50.0);
+		o.informarValor(valor);
+
+		assertTrue(o.getValorMenor() == 20.0);
 	}
 
 	@After
