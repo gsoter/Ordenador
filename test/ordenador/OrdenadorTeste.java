@@ -41,6 +41,32 @@ public class OrdenadorTeste {
 		assertTrue(o.vMaior == 3.0);
 	}
 
+	@Test
+	public void testeValorMaior() {
+		o.vMaior = 10.0;
+		assertTrue(o.getValorMaior() == 10);
+
+	}
+	
+	@Test
+	public void testeValorMaiorColecao() {
+		Collection<String> pColecao = new ArrayList<String>();
+		pColecao.add("18");
+		pColecao.add("13");
+		pColecao.add("10");
+		pColecao.add("12");
+		pColecao.add("11");
+		pColecao.add("14");
+		pColecao.add("16");
+		pColecao.add("17");
+		pColecao.add("19");
+		pColecao.add("15");
+		o.inserirColecao(pColecao);
+		
+		assertTrue(o.getValorMaior() == 19);
+
+	}
+
 	@After
 	public void finalizar() {
 		o = null;
