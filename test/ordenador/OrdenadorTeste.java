@@ -69,6 +69,26 @@ public class OrdenadorTeste {
 		assertTrue(o.getValorMenor() == 20.0);
 	}
 
+	@Test
+	public void testeValorMedio() {
+		Collection<String> pColecao = new ArrayList<String>();
+		pColecao.add("5");
+		pColecao.add("3");
+		pColecao.add("10");
+		pColecao.add("2");
+		pColecao.add("1");
+		pColecao.add("4");
+		pColecao.add("6");
+		pColecao.add("7");
+		pColecao.add("9");
+		pColecao.add("8");
+		o.inserirColecao(pColecao);
+
+		Double expected = 5.5;
+
+		assertEquals(expected, o.getValorMedio());
+	}
+
 	@After
 	public void finalizar() {
 		o = null;
