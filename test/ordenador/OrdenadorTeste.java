@@ -29,16 +29,44 @@ public class OrdenadorTeste {
 		pColecao.add("1");
 
 		o.inserirColecao(pColecao);
-		assertTrue(o.vMaior == 9);
+		assertNotNull(o.getColecao());
 	}
 
 	@Test
 	public void testeInformarValorNumerico() {
 		String pValor = "3";
-		o.vMaior = 2.0;
+		o.setValorMaior(2.0);
 		o.informarValor(pValor);
 
-		assertTrue(o.vMaior == 3.0);
+		assertTrue(o.getValorMaior() == 3.0);
+	}
+
+	@Test
+	public void testeValorMaiorColecao() {
+		Collection<String> pColecao = new ArrayList<String>();
+		pColecao.add("18");
+		pColecao.add("13");
+		pColecao.add("10");
+		pColecao.add("12");
+		pColecao.add("11");
+		pColecao.add("14");
+		pColecao.add("16");
+		pColecao.add("17");
+		pColecao.add("19");
+		pColecao.add("15");
+		o.inserirColecao(pColecao);
+
+		assertTrue(o.getValorMaior() == 19);
+	}
+
+	@Test
+	public void testeValorMenor() {
+		String valor = "20.0";
+
+		o.setValorMenor(50.0);
+		o.informarValor(valor);
+
+		assertTrue(o.getValorMenor() == 20.0);
 	}
 
 	@After
